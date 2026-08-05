@@ -14,41 +14,52 @@ Built on the [ModSharp](https://github.com/Kxnrl/modsharp-public) framework · C
 
 ---
 
-Every plugin here runs in production on public Counter-Strike 2 servers — these are not demos.
-They cover complete gamemodes (Prop Hunt, TTT, Retakes, KZ, 1v1 Arenas), server administration,
-and the infrastructure that sits underneath them.
+Complete gamemodes, server administration and the infrastructure underneath them — all running in
+production on public Counter-Strike 2 servers. These are not demos.
 
 ## Gamemodes
 
-| Plugin | What it does |
+| Plugin | What it is |
 |---|---|
-| [cs2-prophunt](https://github.com/cs2-server-plugins/cs2-prophunt) | Prop Hunt — core engine plus ranks, stats, shop and HUD modules |
-| [cs2-ttt](https://github.com/cs2-server-plugins/cs2-ttt) | Trouble in Terrorist Town |
-| [cs2-retakes](https://github.com/cs2-server-plugins/cs2-retakes) | Bomb-site retake practice with weapon allocation and zone-based spawns |
+| [cs2-prophunt](https://github.com/cs2-server-plugins/cs2-prophunt) | Prop Hunt — engine plus ranks, stats, shop and HUD modules |
+| [cs2-ttt](https://github.com/cs2-server-plugins/cs2-ttt) | Trouble in Terrorist Town — roles, karma, shop, DNA scanner, body confirmation |
+| [cs2-jailbreak](https://github.com/cs2-server-plugins/cs2-jailbreak) | Jailbreak — warden, last requests, special days, rebel tracking |
+| [cs2-superpowers](https://github.com/cs2-server-plugins/cs2-superpowers) | 142 powers across 13 packs, plus a custom-rounds engine |
 | [cs2-kreedz](https://github.com/cs2-server-plugins/cs2-kreedz) | KZ climbing — from-scratch, cs2kz-compatible |
-| [cs2-arenas](https://github.com/cs2-server-plugins/cs2-arenas) | 1v1 / 2v2 arena dueling with queueing, loadouts and special rounds |
-| [cs2-monster-mod](https://github.com/cs2-server-plugins/cs2-monster-mod) | AI monsters that navigate, chase and fight — HTN brain with A\* pathfinding |
+| [cs2-retakes](https://github.com/cs2-server-plugins/cs2-retakes) | Bomb-site retake practice with weapon allocation and zone spawns |
+| [cs2-furien](https://github.com/cs2-server-plugins/cs2-furien) | Asymmetric knife-vs-guns infection, in the Furien tradition |
+| [cs2-arenas](https://github.com/cs2-server-plugins/cs2-arenas) | 1v1 / 2v2 arena dueling with queueing, loadouts, special rounds |
+| [cs2-duels](https://github.com/cs2-server-plugins/cs2-duels) | 1v1 ladder with an in-game arena editor |
+| [cs2-invisiblemod](https://github.com/cs2-server-plugins/cs2-invisiblemod) | Hide-and-seek — frozen invisible hiders, sound-hunting seekers |
+| [cs2-minihumans](https://github.com/cs2-server-plugins/cs2-minihumans) | Shrinks players into mini-humans, with custom camera and collision |
+| [cs2-monster-mod](https://github.com/cs2-server-plugins/cs2-monster-mod) | AI monsters with HTN behaviour and A\* navigation ⚠️ *work in progress* |
+| [cs2-1vsall](https://github.com/cs2-server-plugins/cs2-1vsall) | One versus all |
+
+## Match & event management
+
+| Plugin | What it is |
+|---|---|
+| [cs2-mixscrims](https://github.com/cs2-server-plugins/cs2-mixscrims) | Mix and scrim matches — captains, teams, leavers, substitutes |
+| [cs2-event-manager](https://github.com/cs2-server-plugins/cs2-event-manager) | Deploy every event mode to one server and switch between them live |
+| [cs2-fun-rounds](https://github.com/cs2-server-plugins/cs2-fun-rounds) | Config-driven engine for fun and special rounds |
 
 ## Server administration
 
-| Plugin | What it does |
+| Plugin | What it is |
 |---|---|
 | [cs2-mapchooser](https://github.com/cs2-server-plugins/cs2-mapchooser) | End-of-map voting, RTV, nominations, map extensions |
 | [cs2-vip](https://github.com/cs2-server-plugins/cs2-vip) | VIP framework — groups, perk registry, admin-panel integration |
 
 ## Progression & diagnostics
 
-| Plugin | What it does |
+| Plugin | What it is |
 |---|---|
 | [cs2-progression](https://github.com/cs2-server-plugins/cs2-progression) | Missions, achievements and a season pass |
-| [modsharp-profiler](https://github.com/cs2-server-plugins/modsharp-profiler) | EventPipe CPU profiler — captures traces and reports to Discord |
-
-> More plugins are being migrated into this organisation. Browse the
-> [full repository list](https://github.com/orgs/cs2-server-plugins/repositories) for everything published so far.
+| [modsharp-profiler](https://github.com/cs2-server-plugins/modsharp-profiler) | EventPipe CPU profiler — captures traces, reports to Discord |
 
 ## Getting started
 
-These are [ModSharp](https://github.com/Kxnrl/modsharp-public) modules. In general:
+These are [ModSharp](https://github.com/Kxnrl/modsharp-public) modules:
 
 ```bash
 git clone https://github.com/cs2-server-plugins/<plugin>.git
@@ -57,17 +68,29 @@ dotnet build -c Release
 # copy .build/modules/* into <server>/game/sharp/modules/
 ```
 
-Each repository documents its own configuration, commands and dependencies — start with its README.
+Each repository documents its own commands, configuration and dependencies — start with its README.
+Configuration files ship as `.example`; copy and edit rather than editing in place, so a redeploy
+does not overwrite your settings.
+
+## Contributing
+
+Issue templates, a pull-request template and the contribution guide apply across every repository
+here — see [CONTRIBUTING](https://github.com/cs2-server-plugins/.github/blob/main/CONTRIBUTING.md).
+
+Security issues go through private reporting, never a public issue:
+[SECURITY](https://github.com/cs2-server-plugins/.github/blob/main/SECURITY.md). These plugins run on
+live game servers, so a public report is a working exploit for anyone who reads it first.
 
 ## Credits
 
 Many of these are ports or reimplementations of existing SourceMod and CounterStrikeSharp plugins,
-migrated to ModSharp. Original authors are credited in each repository's README, and upstream
-licences are preserved. If something of yours is here and the attribution is wrong, open an issue —
-it will be fixed.
+migrated to ModSharp. Original authors are credited in each repository, and upstream licences are
+preserved — several of these are GPL or AGPL precisely because the work they descend from is.
+
+If something of yours is here and the attribution is wrong, open an issue and it will be fixed.
 
 Built on [ModSharp](https://github.com/Kxnrl/modsharp-public) by Kxnrl.
 
 <div align="center">
-<sub>Counter-Strike 2 · CS2 · dedicated server · plugins · gamemodes · ModSharp · C#</sub>
+<sub>Counter-Strike 2 · CS2 · dedicated server · plugins · gamemodes · ModSharp · Source 2 · C#</sub>
 </div>
