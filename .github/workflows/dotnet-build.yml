@@ -1,0 +1,54 @@
+# Reusable build for every plugin in this organisation.
+#
+# Called rather than copied, so a change to the build (SDK bump, new flag) happens once here instead
+# of in 69 near-identical files that drift apart. Repos opt in with:
+#
+#   jobs:
+#     build:
+#       uses: cs2-server-plugins/.github/.github/workflows/dotnet-build.yml@main
+#
+name: build
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: .NET SDK version
+        type: string
+        default: '10.0.x'
+      configuration:
+        description: Build configuration
+        type: string
+        default: Release
+      project:
+        description: Solution or project to build. Defaults to whatever is in the root.
+        type: string
+        default: ''
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ inputs.dotnet-version }}
+
+      # Restore separately so a dependency failure is distinguishable from a compile failure.
+      - name: Restore
+        run: dotnet restore ${{ inputs.project }}
+
+      - name: Build
+        run: dotnet build ${{ inputs.project }} -c ${{ inputs.configuration }} --no-restore
+
+      # Uploaded so a maintainer can test a PR build without cloning and building it themselves.
+      - name: Upload build output
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.repository.name }}-${{ inputs.configuration }}
+          path: |
+            .build/
+            **/bin/${{ inputs.configuration }}/
+          if-no-files-found: ignore
+          retention-days: 14

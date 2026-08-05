@@ -22,7 +22,7 @@ and the infrastructure that sits underneath them.
 
 | Plugin | What it does |
 |---|---|
-| [prophunt](https://github.com/cs2-server-plugins/prophunt) | Prop Hunt — core engine plus ranks, stats, shop and HUD modules |
+| [cs2-prophunt](https://github.com/cs2-server-plugins/cs2-prophunt) | Prop Hunt — core engine plus ranks, stats, shop and HUD modules |
 | [cs2-ttt](https://github.com/cs2-server-plugins/cs2-ttt) | Trouble in Terrorist Town |
 | [cs2-retakes](https://github.com/cs2-server-plugins/cs2-retakes) | Bomb-site retake practice with weapon allocation and zone-based spawns |
 | [cs2-kreedz](https://github.com/cs2-server-plugins/cs2-kreedz) | KZ climbing — from-scratch, cs2kz-compatible |

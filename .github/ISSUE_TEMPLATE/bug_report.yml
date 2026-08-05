@@ -1,0 +1,54 @@
+name: Bug report
+description: Something behaves incorrectly on a server
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Server-side plugin issues are hard to reproduce without the environment.
+        The fields below are the ones that actually determine whether a bug can be found.
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: Release tag, or the commit SHA you built from.
+    validations: {required: true}
+  - type: input
+    id: modsharp-version
+    attributes:
+      label: ModSharp version
+      description: e.g. git-137 / 2.1.136
+    validations: {required: true}
+  - type: input
+    id: gamemode
+    attributes:
+      label: Gamemode / server type
+      placeholder: retakes, jailbreak, public, 1v1...
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what happened instead.
+    validations: {required: true}
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load the plugin with this config
+        2. Join as T
+        3. ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Server log output
+      description: |
+        From `<sharp>/logs/` — Error and Warn for the day it happened.
+        A stack trace is worth more than any description.
+      render: shell
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant config
+      description: Redact passwords, tokens and webhook URLs before pasting.
+      render: json
