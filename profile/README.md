@@ -26,6 +26,7 @@ production on public Counter-Strike 2 servers. These are not demos.
 | [cs2-jailbreak](https://github.com/cs2-server-plugins/cs2-jailbreak) | Jailbreak — warden, last requests, special days, rebel tracking |
 | [cs2-superpowers](https://github.com/cs2-server-plugins/cs2-superpowers) | 142 powers across 13 packs, plus a custom-rounds engine |
 | [cs2-kreedz](https://github.com/cs2-server-plugins/cs2-kreedz) | KZ climbing — from-scratch, cs2kz-compatible |
+| [cs2-mixscrims](https://github.com/cs2-server-plugins/cs2-mixscrims) | Mix and scrim matches — captains, team picking, leavers and substitutes |
 | [cs2-retakes](https://github.com/cs2-server-plugins/cs2-retakes) | Bomb-site retake practice with weapon allocation and zone spawns |
 | [cs2-furien](https://github.com/cs2-server-plugins/cs2-furien) | Asymmetric knife-vs-guns infection, in the Furien tradition |
 | [cs2-arenas](https://github.com/cs2-server-plugins/cs2-arenas) | 1v1 / 2v2 arena dueling with queueing, loadouts, special rounds |
@@ -34,11 +35,10 @@ production on public Counter-Strike 2 servers. These are not demos.
 | [cs2-minihumans](https://github.com/cs2-server-plugins/cs2-minihumans) | Shrinks players into mini-humans, with custom camera and collision |
 | [cs2-1vsall](https://github.com/cs2-server-plugins/cs2-1vsall) | One versus all |
 
-## Match & event management
+## Event & round modes
 
 | Plugin | What it is |
 |---|---|
-| [cs2-mixscrims](https://github.com/cs2-server-plugins/cs2-mixscrims) | Mix and scrim matches — captains, teams, leavers, substitutes |
 | [cs2-event-manager](https://github.com/cs2-server-plugins/cs2-event-manager) | Deploy every event mode to one server and switch between them live |
 | [cs2-fun-rounds](https://github.com/cs2-server-plugins/cs2-fun-rounds) | Config-driven engine for fun and special rounds |
 
