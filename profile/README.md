@@ -32,7 +32,6 @@ production on public Counter-Strike 2 servers. These are not demos.
 | [cs2-duels](https://github.com/cs2-server-plugins/cs2-duels) | 1v1 ladder with an in-game arena editor |
 | [cs2-invisiblemod](https://github.com/cs2-server-plugins/cs2-invisiblemod) | Hide-and-seek — frozen invisible hiders, sound-hunting seekers |
 | [cs2-minihumans](https://github.com/cs2-server-plugins/cs2-minihumans) | Shrinks players into mini-humans, with custom camera and collision |
-| [cs2-monster-mod](https://github.com/cs2-server-plugins/cs2-monster-mod) | AI monsters with HTN behaviour and A\* navigation ⚠️ *work in progress* |
 | [cs2-1vsall](https://github.com/cs2-server-plugins/cs2-1vsall) | One versus all |
 
 ## Match & event management
