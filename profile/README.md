@@ -48,6 +48,7 @@ production on public Counter-Strike 2 servers. These are not demos.
 |---|---|
 | [cs2-mapchooser](https://github.com/cs2-server-plugins/cs2-mapchooser) | End-of-map voting, RTV, nominations, map extensions |
 | [cs2-vip](https://github.com/cs2-server-plugins/cs2-vip) | VIP framework — groups, perk registry, admin-panel integration |
+| [cs2-skill-autobalance](https://github.com/cs2-server-plugins/cs2-skill-autobalance) | Skill-based round-end team balancer — CTPS with outlier detection |
 
 ## Progression & diagnostics
 
