@@ -48,6 +48,11 @@ production on public Counter-Strike 2 servers. These are not demos.
 |---|---|
 | [cs2-mapchooser](https://github.com/cs2-server-plugins/cs2-mapchooser) | End-of-map voting, RTV, nominations, map extensions |
 | [cs2-vip](https://github.com/cs2-server-plugins/cs2-vip) | VIP framework — groups, perk registry, admin-panel integration |
+| [cs2-calladmin](https://github.com/cs2-server-plugins/cs2-calladmin) | In-game report system — players report cheaters, admins claim and resolve |
+| [cs2-afk-manager](https://github.com/cs2-server-plugins/cs2-afk-manager) | Moves idle players to spectator or kicks them after configurable thresholds |
+| [cs2-hitmark](https://github.com/cs2-server-plugins/cs2-hitmark) | Attacker-only hitmarkers, damage numbers and hitsounds |
+| [cs2-reset-score](https://github.com/cs2-server-plugins/cs2-reset-score) | Players reset their own scoreboard stats; admins can set anyone's |
+| [cs2-round-end-sounds](https://github.com/cs2-server-plugins/cs2-round-end-sounds) | Weighted-random song at round end, per-client volume and prefs |
 | [cs2-skill-autobalance](https://github.com/cs2-server-plugins/cs2-skill-autobalance) | Skill-based round-end team balancer — CTPS with outlier detection |
 
 ## Progression & diagnostics
